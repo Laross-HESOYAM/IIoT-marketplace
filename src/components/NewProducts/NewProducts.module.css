@@ -1,0 +1,37 @@
+.mainNewPr {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    gap: 20px;
+}
+
+.sliderDivMain {
+    display: flex !important;
+    width: 14vw !important;
+    height: 337px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: #FFF;
+    justify-content: space-between;
+    transition: transform .3s;
+}
+
+.sliderDivMain:hover {
+    /* transform: scale(1.05); */
+}
+
+.slTexLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnStar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}

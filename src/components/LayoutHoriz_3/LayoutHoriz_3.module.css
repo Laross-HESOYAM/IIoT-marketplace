@@ -1,0 +1,39 @@
+.mainL2 {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.mch1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.mch2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+}
+
+.mch_2 {
+    display: flex;
+    width: 25vw;
+    height: 120px;
+    padding: 10px;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 8px;
+    background: #FFF;
+}
+
+.cheakICON {
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  user-select: none;
+  scrollbar-width: none;
+  /* transition: 500ms ease; */
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE и Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* transition: .5s ease-in-out; */
+}
+
+ul {
+  margin-left: 20px;
+  /* Отступ слева в браузере IE и Opera */
+  padding-left: 0;
+  /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fontSiz_12_400 {
+  color: #929597;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  /* 116.667% */
+}
+
+.fontSiz_14_400 {
+  color: #5A5B5D;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  /* 128.571% */
+}
+
+.fontSiz_16_400 {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 125% */
+}
+
+.fontSiz_16_400Blc {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 125% */
+}
+
+.fontSiz_16_500 {
+  color: var(--Black, #0B0B0C);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  /* 118.75% */
+}
+
+.fontSiz_20_400 {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 120% */
+}
+
+.fontSiz_24_500 {
+  color: var(--Black, #0B0B0C);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.fontSiz_32_500 {
+  color: #0B0B0C;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  /* 112.5% */
+}
+
+.fontSiz_40_500 {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 2.75rem;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.fontSiz_60 {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  /* font-family: Roboto; */
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+  /* 106.667% */
+}
+
+
+
+:where(.inpGlob).ant-input-affix-wrapper>input.ant-input {
+  padding-left: 10px;
+}
+
+/* КНОПКА ПОИСКА У ИНПУТА */
+:where(.css-dev-only-do-not-override-1t837oz).ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+  /* padding: 6px; */
+  height: 39.2px;
+  border: 1px solid #DCFF00;
+  background: #DCFF00;
+  color: black;
+}
+
+/* SLICK*/
+.slick-next {
+  right: 20px !important;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 3;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px !important;
+  opacity: 1 !important;
+  /* z-index: 9 !important; */
+  color: #8A24F8 !important;
+}
+
+.slick-dots li button:before {
+  font-size: 0 !important;
+}
+
+.slick-disabled {
+  display: none !important;
+}
+
+/** TABS HELP start*/
+/* :where(.css-dev-only-do-not-override-kghr11).ant-menu-light .ant-menu-submenu-title {
+  color: rgb(123, 124, 125);
+} */
+
+
+/** TABS HELP end*/
+
+
+/** MEDIA */
+@media screen and (max-width: 1245px) {
+
+  .fontSiz_16_400 {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,35 @@
+.mainNewPr {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    gap: 20px;
+}
+
+.sliderDivMain {
+    display: flex !important;
+    width: 14vw !important;
+    height: 272px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: #FFF;
+    justify-content: space-between;
+    ;
+}
+
+.slTexLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 10px;
+}
+
+.btnStar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
