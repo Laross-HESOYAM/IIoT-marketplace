@@ -1,6 +1,6 @@
 import React from 'react'
 import s from './_for_help.module.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 const Legal_Information = () => {
   return (
     <div className={s.itemChildTab}>

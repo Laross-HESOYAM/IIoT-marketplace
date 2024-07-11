@@ -109,6 +109,12 @@
     color: #fff;
     border: 1px solid #8A24F8;
     background: #8A24F8;
+    cursor: pointer;
+}
+
+.btnM1:hover {
+    border: 1px solid #7b00ff;
+    background: #7b00ff;
 }
 
 .btnM2 {

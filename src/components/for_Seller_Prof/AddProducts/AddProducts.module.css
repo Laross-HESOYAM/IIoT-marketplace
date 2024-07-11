@@ -1,0 +1,54 @@
+.topInfo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    align-items: center;
+}
+
+.mainFlexWrap {
+    display: flex;
+    width: 100%;
+    row-gap: 24px;
+    flex-direction: column;
+}
+
+.flex_wrap {
+    width: 100%;
+    border-radius: 8px;
+    /* background: red; */
+    /* padding: 16px; */
+    min-height: 200px;
+    display: flex;
+    column-gap: 24px;
+}
+
+
+.dochBTN {
+    background: #D5E1E9;
+    padding: 6px;
+    width: 150px;
+    height: 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #7B7C7D;
+    text-align: center;
+
+}
+
+.dochFlex {
+    width: 100%;
+    background: #F0F3F5;
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 200px;
+    /* transition: 0.4s; */
+
+    -webkit-transition: transform 400ms;
+    transition: transform 200ms;
+}
+
+.dochFlex:hover {
+    transform: scale(1.03);
+    /* transform: translateZ(0); */
+    backface-visibility: hidden;
+}

@@ -1,3 +1,9 @@
+.mainDiv {
+    min-height: 47.3vh;
+    height: 100%;
+    padding: 24px 60px 90px 46px;
+}
+
 .mainTabs {
     /* padding: 24px 60px 90px 46px; */
     padding-bottom: 24px;
@@ -5,30 +11,10 @@
     border-bottom: none !important;
 }
 
-
-.mainDiv {
-    min-height: 47.3vh;
-    height: 100%;
-    padding: 24px 60px 90px 46px;
-}
-
 .mainChaild {
+    /* height: 100%; */
     padding: 1.5rem;
     margin-left: 16px;
     background: rgb(255, 255, 255);
     border-radius: 0.5rem;
-}
-
-
-
-
-
-.ulTabs {
-    padding-left: 30px;
-}
-
-.spanFlex {
-    display: block;
-    height: 14vh;
-    padding-top: 3vh;
 }

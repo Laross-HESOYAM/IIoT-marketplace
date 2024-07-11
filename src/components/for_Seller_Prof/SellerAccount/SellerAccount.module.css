@@ -1,0 +1,97 @@
+.saveAc {
+    width: 316px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgb(172, 174, 176);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: rgb(172, 174, 176);
+}
+
+.chMFl {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.d_box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.divFR_Btn {
+    width: 70%;
+}
+
+.divForm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 24px;
+    padding-bottom: 32px;
+}
+
+.divFormChld {
+    width: 100%;
+    display: flex;
+    row-gap: 24px;
+    flex-direction: column;
+}
+
+.divSetting {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 8px;
+}
+
+.delText {
+    /* width: 864px; */
+    /* height: Hug (88px)px; */
+    padding: 24px;
+    border-radius: 8px;
+    /* opacity: 0px; */
+    background: #F0F3F5;
+    margin-top: 24px;
+    margin-bottom: 32px;
+
+}
+
+.btnDelPost {
+    width: 316px;
+    height: 40px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: #8D24F8;
+
+}
+
+.fl_jusCen {
+    display: flex;
+    justify-content: center;
+}
+
+.fl_column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    width: 450px;
+}
+
+.inputAccaun {
+
+    height: 40px;
+    padding: 0px 8px 0px 8px;
+    border-radius: 12px;
+    /* border: 1px solid grey; */
+
+}
+
+.changePassForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+}

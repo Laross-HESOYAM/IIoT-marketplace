@@ -1,0 +1,10 @@
+.mainFooter {
+    width: 100%;
+    height: 340px;
+    display: flex;
+    padding: 40px 60px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    background: #0B0B0C;
+}

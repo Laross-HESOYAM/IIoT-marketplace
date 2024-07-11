@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import s from './Help.module.css'
-import { Outlet, useLocation, Link } from 'react-router-dom'
+// import { Outlet, useLocation, Link } from 'react-router-dom'
 //! COMPONENTS
 import CustomersHelp from '../../components/for_Help/CustomersHelp'
 import Manufacturer_Instructions from '../../components/for_Help/Manufacturer_Instructions'
@@ -8,9 +8,9 @@ import TradingCompany_Instructions from '../../components/for_Help/TradingCompan
 import AboutProject from '../../components/for_Help/AboutProject'
 import Legal_Information from '../../components/for_Help/Legal_Information'
 import ProblemSolving from '../../components/for_Help/ProblemSolving'
-//! REDUX
-import { useDispatch } from 'react-redux'
-import { addBread } from '../../store/breadcrumbSlice'
+// //! REDUX
+// import { useDispatch } from 'react-redux'
+// import { addBread } from '../../store/breadcrumbSlice'
 //! ANTD
 import { Button, Menu, ConfigProvider } from 'antd'
 const Help = () => {

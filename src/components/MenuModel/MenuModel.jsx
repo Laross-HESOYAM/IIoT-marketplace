@@ -5,8 +5,10 @@ import Registration from '../Registration/Registration'
 //!ANTD
 import { Input, Button, Modal } from 'antd'
 import { Asterisk, LockKeyhole, User } from 'lucide-react'
-const MenuModel = ({ toglClass, setToglClass }) => {
+const MenuModel = ({ toglClass, setToglClass, setUserName, setRole }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [user, setUser] = useState()
+  const [pass, setPass] = useState()
   const showModal = () => {
     setIsModalOpen(true)
   }
@@ -15,6 +17,35 @@ const MenuModel = ({ toglClass, setToglClass }) => {
   }
   const handleCancel = () => {
     setIsModalOpen(false)
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    try {
+      const response = await fetch(
+        `https://api.escuelajs.co/api/v1/users/${user}`,
+        {
+          method: 'GET',
+        }
+      )
+
+      if (response.ok) {
+        const result = await response.json()
+        console.log(result)
+        localStorage.setItem('access', result.role)
+        setUserName(result.name)
+        setRole('seller')
+        setToglClass(false)
+        // localStorage.setItem('user', user)
+      }
+      if (response.status === 401) {
+        setUser()
+        setPass()
+        console.log('error', response.status)
+      }
+    } catch (error) {
+      console.log(error)
+      error === '' ? alert('Ошибка:', error) : alert('ERR_CONNECTION_TIMED_OUT')
+    }
   }
   return (
     <div className={`${s.menu} ${toglClass ? s.menu_active : ''}`}>
@@ -33,7 +64,7 @@ const MenuModel = ({ toglClass, setToglClass }) => {
       </Modal>
       <div className={s.chMenu}>
         <span className="fontSiz_24_500">Вход </span>
-        <div className={s.chMen_1}>
+        <form className={s.chMen_1} onSubmit={handleSubmit}>
           <div className={s.chMen_2}>
             <div className={s.chMFl}>
               <span className="fontSiz_16_500">
@@ -41,7 +72,11 @@ const MenuModel = ({ toglClass, setToglClass }) => {
               </span>
               <Input
                 className={`${s.userFrm} inpGlob`}
-                placeholder="Имя пользователя: admin or user"
+                placeholder="Имя пользователя"
+                type="text"
+                name="username"
+                value={user}
+                onChange={(e) => setUser(e.target.value)}
                 prefix={<User color="#1890FF" size={16} />}
                 required
               />
@@ -76,7 +111,9 @@ const MenuModel = ({ toglClass, setToglClass }) => {
               Забыли пароль?
             </Link>
           </div>
-          <Button className={`${s.btnMenu} ${s.btnM1}`}>Войти</Button>
+          <button type="submit" className={`${s.btnMenu} ${s.btnM1}`}>
+            Войти
+          </button>
           <Button
             className={`${s.btnMenu} ${s.btnM2}`}
             onClick={() => {
@@ -86,7 +123,7 @@ const MenuModel = ({ toglClass, setToglClass }) => {
           >
             Зарегистрироваться
           </Button>
-        </div>
+        </form>
       </div>
     </div>
   )

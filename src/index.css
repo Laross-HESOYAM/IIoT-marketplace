@@ -155,6 +155,18 @@ body {
 }
 
 
+:where(.selectCompany).ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #8D24F8;
+}
+
+input[type=file] {
+  outline: 0;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
 
 :where(.inpGlob).ant-input-affix-wrapper>input.ant-input {
   padding-left: 10px;
@@ -195,11 +207,24 @@ body {
   display: none !important;
 }
 
+/** MODAL ACCAUNT DELL */
+:where(.modalDeled).ant-modal .ant-modal-content {
+  padding: 48px 100px 48px 100px;
+}
+
+/** MODAL ACCAUNT DELL END */
+
 /** TABS HELP start*/
 /* :where(.css-dev-only-do-not-override-kghr11).ant-menu-light .ant-menu-submenu-title {
   color: rgb(123, 124, 125);
 } */
+:where(.css-dev-only-do-not-override-sf9p7v).ant-menu-horizontal .ant-menu-item {
+  padding-inline: 9px;
+}
 
+:where(.css-dev-only-do-not-override-sf9p7v).ant-menu-light.ant-menu-horizontal>.ant-menu-item::after {
+  inset-inline: 9px;
+}
 
 /** TABS HELP end*/
 

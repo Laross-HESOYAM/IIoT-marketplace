@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import s from './Header.module.css'
-
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import LOGO from '../../image/market.svg'
+import { ROUTES } from '../../Utils/Routes'
+import { Link, useNavigate, NavLink } from 'react-router-dom'
 // import { Outlet, useNavigate } from 'react-router-dom'
 import {
   AppstoreOutlined,
@@ -16,20 +17,16 @@ import {
 import { Button, Input, Dropdown, ConfigProvider } from 'antd'
 import { FactoryIcon } from 'lucide-react'
 const { Search } = Input
-const Header = ({ setToglClass, toglClass }) => {
-  const locations = useLocation()
-  console.log(locations.pathname)
+const Header = ({ setToglClass, toglClass, userName, role }) => {
   const [katalogBTN, setKatalogBTN] = useState(false) //Кнопка для Каталога
   const navigation = useNavigate()
-  localStorage.setItem('user', 'guest')
-  console.log(katalogBTN, 'katalogBTN')
-  useEffect(() => {
-    !katalogBTN ? navigation('/') : navigation('/catalog')
-  }, [katalogBTN])
+  console.log('localStorage', localStorage)
+  console.log('role', role)
+
   const items = [
     {
       label: (
-        <Link to="buyerProfile">
+        <Link to={`/profile/${role}`}>
           <UserOutlined /> Пользователь
         </Link>
       ),
@@ -37,21 +34,27 @@ const Header = ({ setToglClass, toglClass }) => {
     },
     {
       label: (
-        <Link to="/">
+        <Button
+          type="text"
+          onClick={() => {
+            localStorage.clear()
+            navigation('/')
+          }}
+        >
           <LogoutOutlined /> Выйти
-        </Link>
+        </Button>
       ),
       key: '1',
     },
-    // {
-    //   type: 'divider',
-    // },
   ]
   return (
     <header className={s.mainHeader}>
       <div className={s.divHead1}>
         <div className={s.chldDivH1}>
-          <span style={{ color: 'white', paddingRight: '40px' }}>LOGO</span>
+          {/* <span style={{ color: 'white', paddingRight: '40px' }}>LOGO</span> */}
+          <Link to={ROUTES.MAIN}>
+            <img src={LOGO} alt="Stuff" />
+          </Link>
           <Button
             type="primary"
             icon={!katalogBTN ? <ProductOutlined /> : <CloseOutlined />}
@@ -97,7 +100,7 @@ const Header = ({ setToglClass, toglClass }) => {
           >
             Москва
           </Button>
-          {localStorage.user === 'guest' ? (
+          {!localStorage.access ? (
             <Button
               className={` ${s.btnStyle}`}
               type="text"
@@ -115,24 +118,26 @@ const Header = ({ setToglClass, toglClass }) => {
               className={` ${s.btnStyle}`}
             >
               <Button type="text" icon={<UserOutlined />}>
-                Войти
+                {userName ? userName : 'Войти'}
               </Button>
             </Dropdown>
           )}
-          <Link
-            to="/help"
-            className={` ${s.btnStyle}`}
-            style={{
-              color: locations.pathname === '/help' ? '#DCFF00' : '#fff',
-            }}
+          <NavLink
+            to={ROUTES.HELP}
+            // className={` ${s.btnStyle}`}
+            className={({ isActive }) =>
+              `${s.btnStyle} ${isActive ? s.activLink : ''}`
+            }
             type="text"
           >
             Помощь
-          </Link>
+          </NavLink>
 
-          <Button className={` ${s.btnStyle}`} type="text">
-            Контакты
-          </Button>
+          <NavLink to="#">
+            <Button type="text" className={`${s.btnStyle}`}>
+              Контакты
+            </Button>
+          </NavLink>
         </div>
       </div>
       <div className={s.divHead2}>

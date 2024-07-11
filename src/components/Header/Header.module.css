@@ -56,6 +56,10 @@
 
 }
 
+.activLink {
+    color: #DCFF00 !important;
+}
+
 .btnStyle:hover {
     color: #DCFF00 !important;
     /* opacity: 0.8; */

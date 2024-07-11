@@ -1,0 +1,6 @@
+.topInfo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    align-items: center;
+}
