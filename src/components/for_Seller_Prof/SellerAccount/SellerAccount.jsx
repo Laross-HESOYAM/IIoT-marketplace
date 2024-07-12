@@ -227,6 +227,7 @@ const SellerAccount = () => {
             className="fontSiz_16_400Blc"
             style={{ color: 'rgb(141, 36, 248)' }}
             type="text"
+            onClick={() => localStorage.clear()}
           >
             Выйти из аккаунта
           </span>

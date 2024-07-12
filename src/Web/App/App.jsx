@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import s from './App.module.css'
 
 import { useDispatch } from 'react-redux'
+import { ConfigProvider } from 'antd'
 
 import AppRouter from '../../Router/Router'
 import MenuModel from '../../components/MenuModel/MenuModel'
@@ -40,7 +41,24 @@ const App = () => {
         userName={userName}
         role={role}
       />
-      <AppRouter />
+      <ConfigProvider
+        theme={{
+          components: {
+            Table: {
+              headerBg: '#F0F3F5',
+              rowHoverBg: '#F0F3F5',
+              lineWidth: 0,
+              // borderColor: '#FAFAFB',
+
+              // headerBorderRadius: '10px',
+              // colorBorderSecondary: 'red',
+            },
+          },
+        }}
+      >
+        <AppRouter />
+      </ConfigProvider>
+
       <Footer />
     </div>
   )

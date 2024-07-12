@@ -32,6 +32,7 @@ const MenuModel = ({ toglClass, setToglClass, setUserName, setRole }) => {
         const result = await response.json()
         console.log(result)
         localStorage.setItem('access', result.role)
+        localStorage.setItem('userName', result.name)
         setUserName(result.name)
         setRole('seller')
         setToglClass(false)

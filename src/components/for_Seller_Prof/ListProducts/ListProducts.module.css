@@ -2,5 +2,26 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.tableCir {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid gold;
+    background: #DCFF00;
+}
+
+.flDivTab {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    column-gap: 6px;
+}
+
+.flDivTab svg {
+    fill: #7B7C7D !important
 }

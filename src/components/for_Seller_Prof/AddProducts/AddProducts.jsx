@@ -19,7 +19,7 @@ const AddProducts = () => {
       </div>
       <div className={s.mainFlexWrap}>
         <div className={s.flex_wrap}>
-          <Link className={s.dochFlex}>
+          <Link className={s.dochFlex} to="/profile/seller/manually">
             <div className={s.topInfo}>
               <span className="fontSiz_16_500">Вручную</span>
               <span className={s.dochBTN}>Немного товаров</span>
@@ -29,10 +29,10 @@ const AddProducts = () => {
                 Подойдёт, если товаров немного. Можно создавать по одному
                 варианту или сразу по несколько
               </span>
-              <img src={fileLogo} alt="" srcset="" />
+              <img src={fileLogo} alt="" />
             </div>
           </Link>
-          <Link className={s.dochFlex}>
+          <Link className={s.dochFlex} to="throughTemplate">
             <div className={s.topInfo}>
               <span className="fontSiz_16_500">Через шаблон</span>
               <span className={s.dochBTN}>Много товаров</span>
@@ -42,12 +42,12 @@ const AddProducts = () => {
                 Добавьте сразу много товаров одной категории — для этого есть
                 умные таблицы с подсказками
               </span>
-              <img src={folderLogo} alt="" srcset="" />
+              <img src={folderLogo} alt="" />
             </div>
           </Link>
         </div>
         <div className={s.flex_wrap}>
-          <Link className={s.dochFlex}>
+          <Link className={s.dochFlex} to="viaAPI">
             <div className={s.topInfo}>
               <span className="fontSiz_16_500">Через API</span>
               <span className={s.dochBTN}>Интеграция</span>
@@ -57,10 +57,10 @@ const AddProducts = () => {
                 Управляйте товарами автоматически — подключите свою систему
                 к личному кабинету
               </span>
-              <img src={linkLogo} alt="" srcset="" />
+              <img src={linkLogo} alt="link" />
             </div>
           </Link>
-          <Link className={s.dochFlex}>
+          <Link className={s.dochFlex} to="downloadingPdfCatalog">
             <div className={s.topInfo}>
               <span className="fontSiz_16_500">Загрузка pdf каталога</span>
               <span className={s.dochBTN}>ИИ</span>
@@ -70,7 +70,7 @@ const AddProducts = () => {
                 Загружайте каталог в формате PDF. ИИ распознает товары и добавит
                 в Ваш каталог
               </span>
-              <img src={likeLogo} alt="" srcset="" />
+              <img src={likeLogo} alt="like" />
             </div>
           </Link>
         </div>

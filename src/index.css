@@ -92,6 +92,7 @@ body {
   /* 125% */
 }
 
+
 .fontSiz_16_500 {
   color: var(--Black, #0B0B0C);
   font-family: "Roboto", sans-serif;
@@ -229,6 +230,17 @@ input[type=file] {
 /** TABS HELP end*/
 
 
+/** TABLE-LIST START */
+:where(.tableList).ant-table-wrapper table {
+  background: #FAFAFB;
+  border: 1px solid grey;
+}
+
+:where(.tableList).ant-table-wrapper .ant-table-pagination-right {
+  justify-content: center;
+}
+
+/** TABLE_LIST END */
 /** MEDIA */
 @media screen and (max-width: 1245px) {
 

@@ -32,6 +32,9 @@ const newProductsSlice = createSlice({
         //     console.log('error - rejected')
         // })
     },
+    reducers: () => {
+
+    },
 })
 
 // export const { addBread, removeBread } = newProductsSlice.actions

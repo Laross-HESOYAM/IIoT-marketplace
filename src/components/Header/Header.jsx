@@ -27,6 +27,7 @@ const Header = ({ setToglClass, toglClass, userName, role }) => {
     {
       label: (
         <Link to={`/profile/${role}`}>
+          {/* <Link to={`/profile/${localStorage.access}`}></Link> */}
           <UserOutlined /> Пользователь
         </Link>
       ),
@@ -118,7 +119,7 @@ const Header = ({ setToglClass, toglClass, userName, role }) => {
               className={` ${s.btnStyle}`}
             >
               <Button type="text" icon={<UserOutlined />}>
-                {userName ? userName : 'Войти'}
+                {localStorage.userName ? localStorage.userName : 'Войти'}
               </Button>
             </Dropdown>
           )}
