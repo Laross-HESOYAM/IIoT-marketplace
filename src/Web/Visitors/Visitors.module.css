@@ -1,0 +1,55 @@
+.mainDiv {
+    min-height: 47.3vh;
+    height: 100%;
+    padding: 24px 60px 90px 46px;
+}
+
+.mainChaild {
+    padding: 1.5rem;
+    margin-left: 16px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+}
+
+.searchHead,
+.selectManuf {
+    width: 300px;
+    height: 40px;
+}
+
+
+
+.card {
+    display: flex;
+    column-gap: 16px;
+    width: 48.99%;
+    height: 190px;
+    border-radius: 8px;
+    padding: 16px;
+    background: #F0F3F5;
+}
+
+.searchDiv {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 24px;
+    padding-top: 24px;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    /* align-content: flex-start; */
+    align-items: flex-start;
+    row-gap: 16px;
+}
+
+.cardMain {
+    padding-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    row-gap: 24px;
+    column-gap: 24px;
+}

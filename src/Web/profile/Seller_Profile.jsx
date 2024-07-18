@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 import s from './_profile.module.css'
 
+//! ANTD
+import { Button, Menu, ConfigProvider } from 'antd'
 //! COMPONENTS
 import SellerAccount from '../../components/for_Seller_Prof/SellerAccount/SellerAccount'
 import Company_page from '../../components/for_Seller_Prof/Company_page/Company_page'
-import AddProducts from '../../components/for_Seller_Prof/AddProducts/AddProducts'
-import HistoryAdding from '../../components/for_Seller_Prof/HistoryAdding/HistoryAdding'
-//! ANTD
-import { Button, Menu, ConfigProvider } from 'antd'
-import ListProducts from '../../components/for_Seller_Prof/ListProducts/ListProducts'
+import AddProducts from '../../components/for_Seller_Prof/Products/AddProducts/AddProducts'
+import HistoryAdding from '../../components/for_Seller_Prof/Products/HistoryAdding/HistoryAdding'
+import ListProducts from '../../components/for_Seller_Prof/Products/ListProducts/ListProducts'
+import Transactions from '../../components/for_Seller_Prof/Sale/Transactions/Transactions'
+import Mail from '../../components/for_Seller_Prof/Sale/mail_sale/Mail'
+import SalesAnalytics from '../../components/for_Seller_Prof/Sale/SalesAnalytics/SalesAnalytics'
+import ListClients from '../../components/for_Seller_Prof/Sale/List of clients/ListClients'
+import Staff from '../Staff/Staff'
+import TradingCompanies from '../TradingCompanies/TradingCompanies'
 const Seller_Profile = () => {
   const [current, setCurrent] = useState('Account')
   const onClick = (e) => {
@@ -47,6 +53,29 @@ const Seller_Profile = () => {
     {
       label: 'Продажа',
       key: 'Sale',
+      children: [
+        {
+          label: 'Сделки',
+          key: 'Transactions',
+        },
+        {
+          label: 'Отзывы',
+          key: 'Reviews',
+          disabled: true,
+        },
+        {
+          label: 'Почта',
+          key: 'Mail',
+        },
+        {
+          label: 'Списки клиентов',
+          key: 'CustomerLists',
+        },
+        {
+          label: 'Аналитика',
+          key: 'Analytics',
+        },
+      ],
       //   disabled: true,
     },
     {
@@ -102,6 +131,12 @@ const Seller_Profile = () => {
         {current === 'AddProducts' && <AddProducts />}
         {current === 'HistoryAdding' && <HistoryAdding />}
         {current === 'ListProducts' && <ListProducts />}
+        {current === 'Transactions' && <Transactions />}
+        {current === 'Mail' && <Mail />}
+        {current === 'Analytics' && <SalesAnalytics />}
+        {current === 'CustomerLists' && <ListClients />}
+        {current === 'Staff' && <Staff />}
+        {current === 'Trading companies' && <TradingCompanies />}
       </div>
     </div>
   )

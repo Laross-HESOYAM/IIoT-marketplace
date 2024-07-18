@@ -10,6 +10,7 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 // import { getCard } from '../../store/categories/categoriesSlice'
 import { getNewCard } from '../../store/newProducts/newProductsSlice'
+import { redirect } from 'react-router'
 
 const App = () => {
   const [userName, setUserName] = useState()
@@ -44,6 +45,13 @@ const App = () => {
       <ConfigProvider
         theme={{
           components: {
+            Statistic: {
+              titleFontSize: 24,
+              contentFontSize: 16,
+            },
+            Select: {
+              colorBorder: '#7B7C7D',
+            },
             Table: {
               headerBg: '#F0F3F5',
               rowHoverBg: '#F0F3F5',
@@ -53,10 +61,19 @@ const App = () => {
               // headerBorderRadius: '10px',
               // colorBorderSecondary: 'red',
             },
+            Input: {
+              colorBgContainer: 'transparent',
+              colorBorder: '#7B7C7D',
+              colorPrimaryHover: '#7B7C7D',
+              // colorText: '#fff',
+              borderRadius: '8px',
+              fontSize: '16px',
+              paddingBlock: 6,
+            },
           },
         }}
       >
-        <AppRouter />
+        <AppRouter toglClass={toglClass} setToglClass={setToglClass} />
       </ConfigProvider>
 
       <Footer />

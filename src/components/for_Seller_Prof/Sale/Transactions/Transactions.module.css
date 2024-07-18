@@ -1,0 +1,103 @@
+.topInfo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.searchHead {
+    width: 320px;
+    height: 40px;
+    padding: 0 8px 0 8px;
+    /* border: 1px solid #7B7C7D; */
+}
+
+.boxFlexTitl {
+    display: flex;
+    column-gap: 1vw;
+}
+
+.firstTitl {
+    width: 29vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.fr1 {
+    background: #F0F3F5;
+}
+
+.fr1 span {
+    color: #7B7C7D;
+}
+
+.fr2 {
+    background: #FEFFC0;
+}
+
+.fr2 span {
+    color: #FF9900;
+}
+
+.fr3 {
+    background: rgba(0, 208, 6, 0.2);
+}
+
+.fr3 span {
+    color: #00D006;
+}
+
+.spanFlex {
+    /* color: rgb(123, 124, 125); */
+    display: flex;
+    align-items: center;
+    column-gap: 1vw;
+}
+
+.cardTrans {
+    display: flex;
+    height: 180px;
+    border-radius: 8px;
+    border: 1px solid #D5E1E9;
+    padding: 14px;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    column-gap: 8px;
+}
+
+.cardTitl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardUl li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0B0B0C;
+}
+
+.btnCard {
+    width: 85px;
+    height: 30px;
+    border-radius: 8px;
+    background: #F0F3F5;
+    font-size: 12px;
+    font-weight: 400;
+    color: #7B7C7D;
+    float: right;
+
+}
+
+.boxCHLD {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 12px;
+}

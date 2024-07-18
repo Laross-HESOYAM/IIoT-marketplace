@@ -1,0 +1,51 @@
+.searchDiv {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 24px;
+    padding-top: 24px;
+}
+
+.searchHead,
+.selectManuf {
+    width: 300px;
+    height: 40px;
+}
+
+.btnClick {
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #0B0B0C;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.firsInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 40%;
+}
+
+.secondInfo {
+    display: flex;
+    width: 45%;
+    column-gap: 24px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #D5E1E9;
+    /* border-bottom: 1px solid #D5E1E9; */
+    padding: 1rem 0;
+}
+
+.flexCard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding-top: 24px;
+}

@@ -9,8 +9,9 @@ import {
   Table,
   Typography,
   Popover,
+  Radio,
 } from 'antd'
-import { ListProdARR } from '../../../Utils/ListProductsARR'
+import { ListProdARR } from '../../../../Utils/ListProductsARR'
 import { EditOutlined, InfoCircleOutlined } from '@ant-design/icons'
 import { render } from '@testing-library/react'
 const originData = []
@@ -212,7 +213,36 @@ const ListProducts = () => {
     <div className={s.mainDiv}>
       <div className={s.topInfo}>
         <span className="fontSiz_24_500">Список товаров</span>
-        <Button>Все</Button>
+        <Radio.Group
+          className="radioGrpBtn"
+          defaultValue="all"
+          buttonStyle="solid"
+          onChange={(e) => console.log(e.target.value)}
+        >
+          <Radio.Button className="radBtn" value="all">
+            Все
+          </Radio.Button>
+          <Radio.Button className="radBtn" value="InStock">
+            В наличии
+          </Radio.Button>
+          <Radio.Button className="radBtn" value="UnderOrder">
+            Под заказ
+          </Radio.Button>
+          <Radio.Button
+            className="radBtn"
+            value="ForRevision"
+            style={{ width: '165px' }}
+          >
+            На доработку
+          </Radio.Button>
+          <Radio.Button
+            className="radBtn"
+            value="WithdrawnSale"
+            style={{ width: '185px' }}
+          >
+            Сняты с продажи
+          </Radio.Button>
+        </Radio.Group>
         <Search placeholder="Поиск" className={`${s.searchHead} searchHeadG`} />
       </div>
       <div>

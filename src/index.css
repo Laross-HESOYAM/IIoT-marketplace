@@ -63,7 +63,7 @@ body {
 
 .fontSiz_14_400 {
   color: #5A5B5D;
-  text-align: center;
+  /* text-align: center; */
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -71,6 +71,7 @@ body {
   line-height: 18px;
   /* 128.571% */
 }
+
 
 .fontSiz_16_400 {
   color: #FFF;
@@ -103,6 +104,18 @@ body {
   /* 118.75% */
 }
 
+.fontSiz_16_600 {
+  /* color: var(--Black, #0B0B0C); */
+  font-family: "Roboto", sans-serif;
+  color: rgb(11, 11, 12);
+  /* font-family: 'SFProText-Bold'; */
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: -0.2px;
+  text-align: left;
+}
+
 .fontSiz_20_400 {
   color: #FFF;
   font-family: "Roboto", sans-serif;
@@ -110,6 +123,16 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  /* 120% */
+}
+
+.fontSiz_20_500 {
+  color: #0B0B0C;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
   /* 120% */
 }
 
@@ -173,13 +196,34 @@ input[type=file] {
   padding-left: 10px;
 }
 
-/* КНОПКА ПОИСКА У ИНПУТА */
+
+
+/** КНОПКА ПОИСКА У ИНПУТА */
 :where(.css-dev-only-do-not-override-1t837oz).ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
   /* padding: 6px; */
   height: 39.2px;
   border: 1px solid #DCFF00;
   background: #DCFF00;
   color: black;
+}
+
+:where(.css-dev-only-do-not-override-1gust37).ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+  height: 39.2px;
+  border: 1px solid #DCFF00;
+  background: #DCFF00;
+  color: black;
+}
+
+:where(.css-dev-only-do-not-override-15tu4kr).ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+  color: rgba(0, 0, 0, 0.45);
+  height: 39px;
+  border: 1px solid #7B7C7D;
+}
+
+:where(.css-dev-only-do-not-override-1g76qn4).ant-input-search>.ant-input-group>.ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+  color: rgba(0, 0, 0, 0.45);
+  height: 39px;
+  border: 1px solid grey;
 }
 
 /* SLICK*/
@@ -214,6 +258,50 @@ input[type=file] {
 }
 
 /** MODAL ACCAUNT DELL END */
+/** STATIC START */
+:where(.staticSale).ant-statistic .ant-statistic-title {
+  color: #0B0B0C;
+}
+
+/** STATIC END */
+/** radio btn start */
+
+:where(.radioGrpBtn).ant-radio-group {
+  display: flex;
+  column-gap: 2vw;
+}
+
+:where(.radBtn).ant-radio-button-wrapper:first-child,
+:where(.radBtn).ant-radio-button-wrapper:last-child {
+  border-radius: 50px;
+}
+
+.ant-radio-group-solid :where(.radBtn).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  color: #fff;
+  background: #8D24F8;
+  border-color: #8D24F8;
+  border-radius: 50px;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+}
+
+.ant-radio-group-solid :where(.radBtn).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before,
+:where(.radBtn).ant-radio-button-wrapper:not(:first-child)::before {
+  background-color: transparent
+}
+
+:where(.radBtn).ant-radio-button-wrapper {
+  width: 120px;
+  height: 32px;
+  text-align: center;
+  border-radius: 50px;
+  color: #7B7C7D;
+  background: #D5E1E9;
+  border-color: #D5E1E9;
+}
+
+/** radio btn  END */
 
 /** TABS HELP start*/
 /* :where(.css-dev-only-do-not-override-kghr11).ant-menu-light .ant-menu-submenu-title {

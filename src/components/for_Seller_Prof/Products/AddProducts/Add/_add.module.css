@@ -1,0 +1,22 @@
+.topInfo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.mainDiv {
+    /* height: 100%; */
+    min-height: 47.3vh;
+    height: 100%;
+    padding: 24px 60px 90px 46px;
+}
+
+.mainChild {
+    padding: 1.5rem;
+    margin-left: 16px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+}

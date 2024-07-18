@@ -1,0 +1,35 @@
+.topInfo {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.searchHead {
+    width: 320px;
+    height: 40px;
+    padding: 0 8px 0 8px;
+    /* border: 1px solid #7B7C7D; */
+}
+
+
+
+.flGrpSerBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.btnCreatMess {
+    width: 210px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #7B7C7D;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 24px;
+
+}

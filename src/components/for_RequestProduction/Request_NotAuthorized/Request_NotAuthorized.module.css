@@ -1,0 +1,18 @@
+.itemChildTab {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    row-gap: 30px;
+}
+
+.btnTabs {
+    width: 19.75rem;
+    height: 2.25rem;
+    border-radius: 0.75rem;
+    background: rgb(141, 36, 248);
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}

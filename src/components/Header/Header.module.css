@@ -45,15 +45,30 @@
     color: #fff;
 }
 
+.iconLink {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 6px;
+
+}
 
 
 .btnStyle {
     background: transparent;
-    color: #fff;
+    color: #fff !important;
     font-size: 16px !important;
     padding: 4px 15px;
     /* transition: opacity 500ms ease; */
 
+}
+
+.btnExit {
+    color: #fff !important;
+}
+
+.btnExit {
+    color: white !important;
+    padding: 4px 15px 4px 0;
 }
 
 .activLink {
