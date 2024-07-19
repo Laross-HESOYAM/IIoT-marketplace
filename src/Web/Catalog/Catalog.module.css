@@ -1,10 +1,62 @@
 .mulDiv1,
 .mulDiv2 {
-    height: 100vh;
-    width: 50%;
+    height: 100%;
+    /* width: 50%; */
+}
+
+.mulDiv2 {
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .mulDiv1 {
     background: white;
-    width: 30%;
+    width: 350px;
+    padding: 20px 0 10% 0;
+}
+
+.mulDiv1 div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menuCatal li {
+    padding: 16px 20px 16px 20px !important;
+    height: 72px !important;
+    font-size: 16px !important;
+}
+
+.mnDV {
+    width: 100%;
+}
+
+.cardName {
+    display: flex;
+    column-gap: 8px;
+    width: 25%;
+    /* -webkit-transition: transform 400ms;
+    transition: transform 100ms; */
+    /* padding: 10px 0; */
+}
+
+.countCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 40px;
+    column-gap: 7vw;
+    row-gap: 5vh;
+}
+
+.cardName:hover,
+.cardName> :first-child:hover {
+    color: #861afb;
+    cursor: pointer;
+
+    /* transform: scale(1.03); */
+    /* background: lightblue; */
 }

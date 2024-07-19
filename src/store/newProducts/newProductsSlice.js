@@ -16,6 +16,7 @@ const newProductsSlice = createSlice({
     name: 'newProducts',
     initialState: {
         card: [],
+        category: [],
         // filtered: [],
         isLoading: false
     },
@@ -25,17 +26,24 @@ const newProductsSlice = createSlice({
         // });
         builder.addCase(getNewCard.fulfilled, (state, { payload }) => {
             state.card = payload
-            state.isLoading = false
+            state.isLoading = true
+            const arr = []
+            payload.map((el, i) => {
+                arr.push(el.category.name)
+            })
+            state.category = [...new Set(arr)]
         });
         // builder.addCase(getNewCard.rejected, (state) => {
         //     state.isLoading = false
         //     console.log('error - rejected')
         // })
     },
-    reducers: () => {
-
+    reducers: {
+        arrCategory(state, action) {
+            state.category = action.payload
+        }
     },
 })
 
-// export const { addBread, removeBread } = newProductsSlice.actions
+export const { arrCategory } = newProductsSlice.actions
 export default newProductsSlice.reducer

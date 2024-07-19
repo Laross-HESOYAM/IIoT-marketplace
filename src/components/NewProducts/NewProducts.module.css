@@ -19,9 +19,7 @@
     transition: transform .3s;
 }
 
-.sliderDivMain:hover {
-    /* transform: scale(1.05); */
-}
+
 
 .slTexLink {
     display: flex;
@@ -55,7 +53,7 @@
 .starFlex {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 

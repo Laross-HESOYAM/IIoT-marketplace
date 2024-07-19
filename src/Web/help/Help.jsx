@@ -97,7 +97,7 @@ const Help = () => {
     },
   ]
   return (
-    <div className={s.mainDiv}>
+    <div className="mainDiv">
       <ConfigProvider
         theme={{
           token: {

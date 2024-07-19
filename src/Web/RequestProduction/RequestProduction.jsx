@@ -8,7 +8,7 @@ import Request_authorized from '../../components/for_RequestProduction/Request_a
 const RequestProduction = ({ toglClass, setToglClass }) => {
   console.log(localStorage.access)
   return (
-    <div className={s.mainDiv}>
+    <div className="mainDiv">
       <div className={s.mainChaild}>
         {!localStorage.access ? (
           <Request_NotAuthorized

@@ -11,7 +11,7 @@ const Visitors = () => {
     console.log(`selected ${value}`)
   }
   return (
-    <div className={s.mainDiv}>
+    <div className="mainDiv">
       <div className={s.mainChaild}>
         <span className="fontSiz_24_500">Посетители</span>
         <div className={s.searchDiv}>

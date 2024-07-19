@@ -51,6 +51,12 @@ body {
   max-height: 100%;
 }
 
+.mainDiv {
+  min-height: 47.3vh;
+  height: 100%;
+  padding: 24px 60px 90px 46px;
+}
+
 .fontSiz_12_400 {
   color: #929597;
   font-size: 12px;

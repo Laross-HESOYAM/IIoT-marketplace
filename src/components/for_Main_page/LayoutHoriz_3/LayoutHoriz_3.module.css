@@ -17,15 +17,16 @@
 
 .mch2 {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 24px;
     width: 100%;
+
 }
 
 .mch_2 {
     display: flex;
     width: 25vw;
-    height: 120px;
+    /* height: 120px; */
     padding: 10px;
     align-items: flex-start;
     gap: 16px;

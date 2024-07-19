@@ -96,7 +96,7 @@ const Seller_Profile = () => {
     },
   ]
   return (
-    <div className={s.mainDiv}>
+    <div className="mainDiv">
       <ConfigProvider
         theme={{
           token: {

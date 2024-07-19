@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Main.module.css'
-
 import { useSelector } from 'react-redux'
+
 // !COMPONENTS
 import Carousell from '../../components/for_Main_page/Carousel/Carousell'
 import LayoutHoriz_1 from '../../components/for_Main_page/LayoutHoriz_1/LayoutHoriz_1'
@@ -13,6 +13,7 @@ import OurPartners from '../../components/OurPartners/OurPartners'
 
 const Main = () => {
   const { card } = useSelector(({ newProducts }) => newProducts)
+
   return (
     <div className={s.mainDiv}>
       <main className={s.mainM}>

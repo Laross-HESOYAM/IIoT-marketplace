@@ -17,8 +17,10 @@ const App = () => {
   const [role, setRole] = useState('guest')
   const dispatch = useDispatch()
   useEffect(() => {
+    //!Запрос на получение данных(новый продукт)
     dispatch(getNewCard())
   }, [dispatch])
+
   const [toglClass, setToglClass] = useState(false)
   useEffect(() => {
     toglClass

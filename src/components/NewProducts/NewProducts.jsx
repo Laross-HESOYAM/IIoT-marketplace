@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import s from './NewProducts.module.css'
 import { Link } from 'react-router-dom'
 import { Button } from 'antd'
@@ -9,7 +9,6 @@ import Star_violet from '../../image/Star_violet.svg'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-// import { StarOutlined } from '@ant-design/icons'
 
 const settings = {
   dots: false,
@@ -18,10 +17,6 @@ const settings = {
   slidesToShow: 6,
 }
 const NewProducts = ({ card }) => {
-  const [test, setTest] = useState([])
-
-  console.log('card', card)
-
   return (
     <div className={s.mainNewPr}>
       <span className="fontSiz_32_500">Новинки</span>
