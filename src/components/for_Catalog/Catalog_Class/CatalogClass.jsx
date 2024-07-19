@@ -19,6 +19,7 @@ const CatalogClass = ({ switchClass }) => {
   }
   const onChange2 = (e) => {
     console.log('radio checked', e.target.value)
+    setSort(e.target.value)
   }
   const onClick = (e) => {
     // setSelectCategor(e.key)
@@ -182,32 +183,60 @@ const CatalogClass = ({ switchClass }) => {
                 </Radio.Button>
               </Radio.Group>
             </div>
-            <div className={s.mainCards}>
-              {/* <div className={s.flTitl}>
-              <span className="fontSiz_16_400Blc">Сначала популярные</span>
-              <Button>SD</Button>
-            </div> */}
+            <div
+              className={`${s.mainCards} ${
+                sort === 'line' ? s.minCardsLine : ''
+              }`}
+            >
               {Array.from(Array(18)).map((el) => {
                 return (
-                  <div className={s.sliderDivMain}>
-                    <div style={{ width: '100%' }}>
+                  <div
+                    className={`${s.sliderDivMain} ${
+                      sort === 'line' ? s.slidRow : s.slidColom
+                    }`}
+                  >
+                    <div
+                      style={{
+                        width: '100%',
+                        display: sort === 'line' && 'none',
+                      }}
+                    >
                       <span className="fontSiz_12_400">
                         Артикул 00001518353
                       </span>
                     </div>
-                    <div className={s.boxImgStar}>
+                    <div
+                      className={`${s.boxImgStar} ${
+                        sort == 'line' && s.boxImgLine
+                      }`}
+                    >
                       <img
                         src={require('../../../image/freza2.png')}
                         alt="df"
-                        style={{ height: '140px' }}
+                        style={{ height: sort === 'line' ? '100px' : '140px' }}
                       />
-                      <div>
+                      <div
+                        style={{
+                          display: sort === 'line' ? 'none' : 'block',
+                        }}
+                      >
                         <img src={SVGfavorite} alt="React Logo" />
                         <img src={SVGstate} alt="React Logo" />
                       </div>
                     </div>
-                    <div>
-                      <div className={s.starFlex}>
+                    <div style={{ width: '65%' }}>
+                      <div
+                        className={`${sort === 'line' ? s.sortBl : s.sortNone}`}
+                      >
+                        <span className={`fontSiz_12_400 `}>
+                          Артикул 00001518353
+                        </span>
+                      </div>
+                      <div
+                        className={`${s.starFlex}  ${
+                          sort === 'line' && s.flexStart
+                        } `}
+                      >
                         <div className={s.stChFlex}>
                           {Array.from(Array(5)).map((el, i) => {
                             return (
@@ -220,16 +249,50 @@ const CatalogClass = ({ switchClass }) => {
                         </div>
                       </div>
 
-                      <div className={s.slTexLink}>
+                      <div
+                        className={`${s.slTexLink}  ${
+                          sort === 'line' && s.flexStart
+                        }`}
+                      >
                         <span style={{ overflow: 'hidden' }}>
-                          Фреза концевая
+                          {sort === 'line'
+                            ? 'Фреза концевая цх ф 6.0х 13х 50 4-п Р6М5 хв. 6мм'
+                            : 'Фреза концевая'}
                         </span>
                         <Link to={`/categories/1`}>Туламаш</Link>
                       </div>
                     </div>
-                    <div className={s.btnStar}>
-                      {`100 ₽`}
-                      <Button className={s.addBasket}>В корзину</Button>
+                    <div
+                      className={`${s.btnStar} ${
+                        sort === 'line' ? s.btnStartLine : s.btnStartColum
+                      }`}
+                    >
+                      <span>{`100 ₽`}</span>
+                      <span
+                        className="fontSiz_12_400"
+                        style={{
+                          color: '#8D24F8',
+                          display: sort === 'line' ? 'block' : 'none',
+                        }}
+                      >
+                        +2 предложения от 20 000 ₽
+                      </span>
+                      <div className={sort === 'line' ? s.flBtnLine : ''}>
+                        <Button
+                          className={s.addBasket}
+                          style={{ width: sort == 'line' ? '320px' : '100px' }}
+                        >
+                          В корзину
+                        </Button>
+                        <div
+                          style={{
+                            display: sort === 'line' ? 'block' : 'none',
+                          }}
+                        >
+                          <img src={SVGfavorite} alt="React Logo" />
+                          <img src={SVGstate} alt="React Logo" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )

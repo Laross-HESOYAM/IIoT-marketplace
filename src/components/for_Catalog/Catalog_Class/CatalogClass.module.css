@@ -37,6 +37,9 @@
     padding-top: 16px;
 }
 
+.minCardsLine {
+    flex-direction: column;
+}
 
 .menuCatal div,
 .menuCatal li {
@@ -63,15 +66,23 @@
     display: flex !important;
     /* width: 13vw !important; */
     min-width: 250px;
-    height: 360px;
     padding: 14px;
-    flex-direction: column;
     align-items: center;
     gap: 1vh;
     border-radius: 8px;
     background: #FFF;
     justify-content: space-between;
     transition: transform .3s;
+}
+
+.slidRow {
+    flex-direction: row;
+    height: 132px;
+}
+
+.slidColom {
+    flex-direction: column;
+    height: 360px;
 }
 
 .boxImgStar {
@@ -81,11 +92,21 @@
     /* padding-top: 10px; */
 }
 
+.boxImgLine {
+    width: 25% !important;
+}
+
 .boxImgStar>div {
     position: absolute;
     top: 0;
     right: 0;
     display: flex;
+}
+
+.flBtnLine {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 
 .starFlex {
@@ -111,9 +132,24 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
     font-size: 14px;
     font-weight: 500;
+}
+
+.btnStartLine {
+    width: 40%;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.flexStart {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.btnStartColum {
+    width: 100%;
 }
 
 .addBasket {
@@ -122,4 +158,12 @@
     border-radius: 8px;
     background: #8D24F8;
     color: white;
+}
+
+.sortBl {
+    padding-bottom: 16px;
+}
+
+.sortNone {
+    display: none;
 }
